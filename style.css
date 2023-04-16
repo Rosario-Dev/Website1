@@ -1,0 +1,396 @@
+*{
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 145vh;
+    position: none;
+    background-color: #080808;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 100px;
+    border-bottom: 1px solid red;
+}
+
+.logo{
+    height: 60px;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #F2F2F2;
+}
+
+.item:hover{
+    color: #ff0000;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.label{
+    cursor: pointer;
+    display: none;
+}
+
+.btn{
+    padding: 10px 24px;
+    border-radius: 30px;
+    background-color: #ff0000;
+    color: #F2F2F2;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #a30000;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+    .menu{
+        padding: 30px;
+        margin: 0;
+        position: none;
+    }
+    
+    label{
+        display: initial;
+    }
+
+    .menu{
+        position: relative;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #080808;
+        border-bottom: 1px solid red;
+        display: none;
+        position: relative;
+    }
+
+    .item{
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+
+    .btn{
+        width: 100px;
+    }
+
+    #menu:checked ~ .menu{
+        display: initial;
+    }
+
+    #catalogo{
+        flex-direction: column;
+    }
+
+    .img1{
+        width: 100%;
+    }
+
+    .services{
+        flex-direction: column;
+    }
+
+}
+
+#banner{
+    padding: 0 50px;
+    background-image: url(./imagenes/bg.jpg);
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.contenido-banner{
+    position: flex;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.contenido-banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.textomedio h4{
+    font-size: 40px;
+    font-weight: 700;
+    padding: 10px 0px;
+    position: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: red;
+}
+
+.textomedio span{
+    color: white;
+}
+
+.textomedio p{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px 0px;
+    position: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.contenido-banner h3 span{
+    font-weight: 800;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+}
+
+.boton-empezar{
+    text-decoration: none;
+    color: white;
+    border: 1px solid red;
+    padding: 20px 40px;
+    align-self: center;
+    transition: all 0.4s;
+}
+
+.boton-empezar:hover{
+    color: rgb(255, 0, 0);
+    background: #d3d3d3;
+}
+
+#catalogo{
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#catalogo img{
+    border-radius: 100%;
+    width: 120px;
+}
+
+#catalogo div{
+    padding: 10px 10px;
+}
+
+#catalogo div h4{
+    color: red;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+
+#catalogo div p{
+    color: white;
+    font-size: 18px;
+}
+
+.boton-saber-mas{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    border: 3px solid red;
+    margin-top: 15px;
+    transition: all 0.4s;
+}
+
+.boton-saber-mas:hover{
+    background: #a30000;
+}
+
+.img1{
+    width: 100%;
+    padding: 100px;
+}
+
+.service img{
+    width: 120px;
+    margin-top: -80px;
+    filter: invert(90%) sepia(64%) saturate(7145%) hue-rotate(355deg) brightness(109%) contrast(128%);
+}
+
+.services{
+    margin: 0px 150px;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.service{
+    padding: 25px;
+    margin: 10px 20px 60px;
+    border-radius: 40px;
+    background-color:#ffeaea;
+    text-align: center;
+}
+
+.service h3{
+    color: red;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.service p{
+    color: rgb(88, 88, 88);
+    font-size: 16px;
+    text-align: center;
+}
+
+.notificaciones{
+    height: 340px;
+    overflow: hidden;
+    background-color: white;
+    padding: 60px 0px;
+    color: rgb(37, 37, 37);
+    text-align: center;
+}
+
+.notificaciones h4{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.form-notificaciones{
+    margin: 0px 90px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.entrada-not{
+    width: 40%;
+    padding: 15px;
+    border-radius: 7px;
+    border: 1px solid gray;
+}
+
+.boton-not{
+    padding: 17px 35px;
+    background-color: red;
+    color: white;
+    border-radius: 7px;
+    border: 0px;
+}
+
+.boton-not:hover{
+    background-color: #cc0000;
+}
+
+/* FOOTERRR */
+
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 50;
+    left: 0;
+    padding: 2rem 8%;
+    background-color: #080808;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo{
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.social-icons-container, .footer-menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.social-icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid #f2f2f2;
+    background-image: url(imagenes/FacebookBlanco.png);
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    margin:1rem;
+}
+
+.social-icon:hover{
+    background-color: #121212;
+    filter: invert(1);
+}
+
+.social-icon:nth-of-type(2){
+    background-image: url(imagenes/InstagramBlanco.png);
+}
+.social-icon:nth-of-type(3){
+    background-image: url(imagenes/TwitterBlanco.png);
+}
+
+
+.footer-menu-container{
+    list-style-type: none;
+    color: #f2f2f2;
+    font-size: 18px;
+}
+
+.menu-item{
+    margin: 1rem 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.menu-item:hover{
+    opacity: 1;
+}
+
+.copyright{
+    color: #f2f2f2;
+    opacity: 0.3;
+    text-align: center;
+}
+
