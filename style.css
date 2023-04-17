@@ -35,15 +35,16 @@ header{
     align-items: center;
 }
 
-.item{
+.menu a{
     margin: 0 15px;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     color: #F2F2F2;
+    text-decoration: none;
 }
 
-.item:hover{
+.menu a:hover{
     color: #ff0000;
 }
 
