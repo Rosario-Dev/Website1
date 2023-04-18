@@ -9,22 +9,28 @@
 </head>
 <body>
     
-    <header id="header">
+    <header>
+        <a href="index.html"> <img class="logo" src="imagenes/Logo Zerin x2.png" alt=""></a>
+        <input type="checkbox" id="menu">
+        <label for="menu"><img class="menu-icono" src="imagenes/menu.png" alt=""></label>
 
-            <img src="imagenes/Logo Zerin.png" class="logo" alt="">
+        <nav class="navbar">
 
-            <input type="checkbox" id="menu" />
-            <label for="menu">
-                <img src="imagenes/menu.png" class="menu-icono" alt="">
-            </label>
-            <ul class="menu">
+            <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Redes Sociales</a></li>
-                <li><a href="#">Comprar</a></li>
+                <li><a href="#">Servicios <img class="flecha" src="imagenes/flecha.png" alt=""></a>
+                    <ul>
+                        <li><a href="#">Desarollo Web</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li><a href="#">Diseño De Marca</a></li>
+                    </ul>
+                </li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#">Cotizar</a></li>
             </ul>
+        </nav>
     </header>
+
     <section id="banner">
         <div class="contenido-banner">
             <h3><span>TUS IDEAS EN <br> ESTRATEGIAS DIGITALES</span> <br> Construimos tu marca a tu medida <br> basandonos en tus ideas para <br> complementar su personalidad!</h3>

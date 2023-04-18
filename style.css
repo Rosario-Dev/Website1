@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 body{
@@ -13,39 +14,71 @@ body{
 }
 
 header{
-    width: 100%;
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
-    height: 100px;
+    right: 0;
+    background-color: #080808;
     border-bottom: 1px solid red;
-}
-
-.logo{
-    height: 60px;
-}
-
-.menu{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 0 7%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
 }
 
-.menu a{
-    margin: 0 15px;
+header .logo{
+ width: 100px;
+ height: 100%;
+}
+
+header .navbar ul{
+    list-style: none;
+}
+
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a{
     font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    color: #F2F2F2;
-    text-decoration: none;
+    padding: 20px;
+    color: white;
+    display: block;
 }
 
-.menu a:hover{
-    color: #ff0000;
+header .navbar ul li a:hover{
+    background-color: red;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: #080808;
+    display: none;
+}
+
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid red;
+}
+
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li:focus-within > ul ,
+header .navbar ul li:hover > ul {
+    display: initial;
+}
+
+.flecha{
+    margin-left: 1px;
+    width: 15px;
 }
 
 #menu{
@@ -56,58 +89,50 @@ header{
     width: 25px;
 }
 
-.label{
+header label{
     cursor: pointer;
     display: none;
 }
 
-.btn{
-    padding: 10px 24px;
-    border-radius: 30px;
-    background-color: #ff0000;
-    color: #F2F2F2;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.btn:hover{
-    background-color: #a30000;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-    .menu{
-        padding: 30px;
-        margin: 0;
-        position: none;
+@media(max-width:911px ){
+    
+    header{
+        padding: 20px;
     }
     
-    label{
+    header label{
         display: initial;
     }
 
-    .menu{
-        position: relative;
+    header .navbar{
+        position: absolute;
         top: 100%;
         left: 0;
         right: 0;
         background-color: #080808;
-        border-bottom: 1px solid red;
+        border-top: 1px solid red;
         display: none;
-        position: relative;
     }
 
-    .a{
-        margin: 0 0 20px 0;
+    header .navbar ul li{
         width: 100%;
     }
 
-    .btn{
-        width: 100px;
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
     }
 
-    #menu:checked ~ .menu{
+    header .navbar ul li ul li{
+        background-color: #080808;
+    }
+
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+
+    #menu:checked ~ .navbar{
         display: initial;
     }
 
@@ -120,12 +145,20 @@ header{
     }
 
     .services{
+        width: 50%;
+        top: 0;
+        left: 0;
+        right: 0;
         flex-direction: column;
     }
 
 }
 
+/* RESPONSIVE */
+
+
 #banner{
+    margin-top: 70px;
     padding: 0 50px;
     background-image: url(./imagenes/bg.jpg);
     height: 60vh;
